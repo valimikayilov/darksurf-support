@@ -44,7 +44,7 @@
           you are. Its core processing and storage happen locally on your device.
         </p>
         <p class="policy-meta">
-          Effective July 20, 2026 · Last updated July 20, 2026
+          Effective July 20, 2026 · Last updated September 27, 2026
         </p>
       </header>
 
@@ -71,9 +71,19 @@
             pages you visit.
           </p>
           <p>
-            The extension also reads the current website hostname to apply your
-            per-site choice and to display whether Dark Surf is active for that
-            page.
+            Some websites load their stylesheets from other servers, which Safari
+            hides from extensions. To recolor those pages, Dark Surf requests the
+            same stylesheet files again from the servers the page already loaded
+            them from, without cookies. It does the same for small logo and icon
+            images, to check on the device whether they would disappear on a dark
+            page and need to be inverted. These requests go only to the servers
+            the website itself uses; nothing is sent to the developer.
+          </p>
+          <p>
+            Dark Surf also measures a page’s colors on the device to tell whether
+            the website already has its own dark design, and reads the current
+            website hostname to apply your per-site choice and to show whether
+            Dark Surf is active for that page.
           </p>
         </section>
 
@@ -84,19 +94,24 @@
             including:
           </p>
           <ul>
-            <li>Whether dark mode is enabled.</li>
-            <li>Theme, intensity, contrast, saturation, and image preferences.</li>
-            <li>Schedule and temporary-pause settings.</li>
-            <li>Hostnames in your include and exclude lists.</li>
-            <li>Local usage counts, such as pages themed and top hostnames.</li>
+            <li>Whether Dark Surf is turned on.</li>
+            <li>Theme, custom colors, brightness, contrast, and image preferences.</li>
+            <li>Schedule, temporary-pause, and Dark Mode preferences, and whether
+              to leave dark websites alone.</li>
+            <li>Hostnames in your Always dark, Inverted, and Never lists.</li>
           </ul>
+          <p>
+            Dark Surf 2.0 keeps no usage statistics. Updating from an earlier
+            version deletes the page counts and hostname counts those versions
+            stored on the device.
+          </p>
           <p>
             These values are stored in Safari extension storage and in Dark
             Surf’s private shared App Group container
             (<strong>group.com.vali.darksurf.shared</strong>) so the iOS app and
             Safari extension can stay in sync. App Group storage is available
             only to Dark Surf’s app and its extension. Dark Surf does not transmit
-            these settings or statistics to the developer.
+            these settings to the developer.
           </p>
         </section>
 
@@ -105,10 +120,10 @@
           <p>
             Safari’s website-access permission is required because a dark-mode
             extension must read and modify page presentation on the websites
-            where you enable it. Dark Surf uses this permission to inject local
-            styles, react to page changes, apply your site rules, and show the
-            extension’s status. It is not used to collect, sell, or transmit your
-            browsing activity.
+            where you enable it. Dark Surf uses this permission to add local
+            styles, read and recolor the website’s own stylesheets, react to page
+            changes, apply your site rules, and show the extension’s status. It is
+            not used to collect, sell, or transmit your browsing activity.
           </p>
           <p>
             You control this permission in Safari settings and can allow access
@@ -136,8 +151,8 @@
         <section aria-labelledby="control-title">
           <h2 id="control-title">Your choices and data deletion</h2>
           <p>
-            You can edit or remove included and excluded hostnames, reset theme
-            settings, clear local usage statistics, revoke website access, or
+            You can edit or remove the hostnames in your website lists, reset
+            your settings, revoke website access, or
             disable Dark Surf at any time. Removing the app also removes its
             locally stored app container in accordance with iOS behavior.
           </p>
@@ -185,7 +200,7 @@
 
     <footer class="site-footer">
       <div class="footer-content">
-        <span>Dark Surf 1.0.1 (build 4) · © 2026 Vali Mikayilov</span>
+        <span>Dark Surf 2.0 · © 2026 Vali Mikayilov</span>
         <div class="footer-links">
           <a href="../">Support</a>
           <a href="./">Privacy</a>
